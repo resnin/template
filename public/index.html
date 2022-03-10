@@ -1,37 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+<head>
+   <meta charset="utf-8" />
+   <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+   <link rel="stylesheet" href="./index.css">
+   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap" rel="stylesheet">
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta name="theme-color" content="#000000" />
+   <meta name="description" content="Web site created using create-react-app" />
+   <title>Spotify</title>
+</head>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+<body>
+   <noscript>You need to enable JavaScript to run this app.</noscript>
+   <div id="root"></div>
+   <div class="container">
+      <header class="header">
+         <div class="header__back-forward">
+            <div class="header__back-button">
+               <img src="./img/leftButton.svg" alt="" class="button-back">
+            </div>
+            <div class="header__forward-button">
+               <img src="./img/rightButton.svg" alt="" class="button-forward">
+            </div>
+         </div>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+         <div class="header__user-menu">
+            <button class="header__pay">Сменить тариф</button>
+            <div class="header__user">
+               <span class="username">Username</span>
+               <img src="./img/menuButton.svg" alt="">
+            </div>
+         </div>
+      </header>
+
+      <nav class="navigation">
+         <div class="navigation__wrapper">
+            <img src="./img/logo.svg" alt="logo" class="navigation__logo">
+
+            <ul class="navigation__list">
+               <li class="navigation__item">
+                  <a href="#" class="navigation__link active">
+                     <img class="navigation__icon" src="./img/homeActive.svg" alt="">
+                     <span class="navigation__title">Главная</span>
+                  </a>
+               </li>
+               <li class="navigation__item">
+                  <a href="#" class="navigation__link">
+                     <img class="navigation__icon" src="./img/search.svg" alt="">
+                     <span class="navigation__title">Поиск</span>
+                  </a>
+               </li>
+               <li class="navigation__item">
+                  <a href="#" class="navigation__link">
+                     <img class="navigation__icon" src="./img/media.svg" alt="">
+                     <span class="navigation__title">Моя медиатека</span>
+                  </a>
+               </li>
+            </ul>
+
+            <ul class="navigation__music">
+               <li class="navigation__item">
+                  <a href="#" class="navigation__link">
+                     <img class="navigation__icon" src="./img/create.svg" alt="">
+                     <span class="navigation__title">Создать плейлист</span>
+                  </a>
+               </li>
+               <li class="navigation__item">
+                  <a href="#" class="navigation__link">
+                     <img class="navigation__icon" src="./img/favourite.svg" alt="">
+                     <span class="navigation__title">Любимые треки</span>
+                  </a>
+               </li>
+            </ul>
+         </div>
+
+      </nav>
+
+      <main class="content">
+         <div class="content__new">
+            <h2 class="content__title">Только для тебя, username</h2>
+            <div class="content__playlists">
+               <div class="content__item">
+                  <div class="playlist-image">
+                     <div class="playlist-play"><img src="./img/play.svg" alt="" class="play"></div>
+                  </div>
+                  <h3 class="playlist-title">Радар новинок</h3>
+                  <p class="playlist-description">Свежая музыка от любимых исполнителей и новые треки, подобранные
+                     специально для тебя. Обновляется каждую пятницу.</p>
+               </div>
+            </div>
+         </div>
+
+         <div class="content__mood">
+            <h2 class="content__title">Настроение</h2>
+            <p class="content__description">Здесь найдется музыка для любого настроения.</p>
+            <div class="content__playlists">
+               <div class="content__item">
+                  <div class="playlist-image">
+                     <div class="playlist-play"><img src="./img/play.svg" alt="" class="play"></div>
+                  </div>
+                  <h3 class="playlist-title">Жизнь прекрасна</h3>
+                  <p class="playlist-description">Позитивные песни для отличного настроения.</p>
+               </div>
+
+               <div class="content__item">
+                  <div class="playlist-image">
+                     <div class="playlist-play"><img src="./img/play.svg" alt="" class="play"></div>
+                  </div>
+                  <h3 class="playlist-title">Feelin' Myself</h3>
+                  <p class="playlist-description">The hip-hop playlist that's a whole mood. Art By Laci Jordan; Cover:
+                     Baby Tate</p>
+               </div>
+
+               <div class="content__item">
+                  <div class="playlist-image">
+                     <div class="playlist-play"><img src="./img/play.svg" alt="" class="play"></div>
+                  </div>
+                  <h3 class="playlist-title">Хюгге</h3>
+                  <p class="playlist-description">Уютные треки, чтобы добавить тепла в домашний вечер.</p>
+               </div>
+
+               <div class="content__item">
+                  <div class="playlist-image">
+                     <div class="playlist-play"><img src="./img/play.svg" alt="" class="play"></div>
+                  </div>
+                  <h3 class="playlist-title">You & Me</h3>
+                  <p class="playlist-description">It's just us—and this awesome alt soundtrack.</p>
+               </div>
+
+               <div class="content__item">
+                  <div class="playlist-image">
+                     <div class="playlist-play"><img src="./img/play.svg" alt="" class="play"></div>
+                  </div>
+                  <h3 class="playlist-title">Chill Tracks</h3>
+                  <p class="playlist-description">Softer kinda dance</p>
+               </div>
+
+               <div class="content__item">
+                  <div class="playlist-image">
+                     <div class="playlist-play"><img src="./img/play.svg" alt="" class="play"></div>
+                  </div>
+                  <h3 class="playlist-title">Calm Before The Storm</h3>
+                  <p class="playlist-description">Aerial post-rock sounds to take you somewhere else.</p>
+               </div>
+
+               <div class="content__item">
+                  <div class="playlist-image">
+                     <div class="playlist-play"><img src="./img/play.svg" alt="" class="play"></div>
+                  </div>
+                  <h3 class="playlist-title">пленка</h3>
+                  <p class="playlist-description">саундтрек твоих лучших снимков</p>
+               </div>
+            </div>
+         </div>
+
+         <div class="content__personal">
+            <h2 class="content__title">Персональные подборки</h2>
+            <div class="content__playlists">
+               <div class="content__item">
+                  <div class="playlist-image">
+                     <div class="playlist-play"><img src="./img/play.svg" alt="" class="play"></div>
+                  </div>
+                  <h3 class="playlist-title">На повторе</h3>
+                  <p class="playlist-description">Треки, которые тебе нравятся сейчас</p>
+               </div>
+
+               <div class="content__item">
+                  <div class="playlist-image">
+                     <div class="playlist-play"><img src="./img/play.svg" alt="" class="play"></div>
+                  </div>
+                  <h3 class="playlist-title">Ностальгический микс</h3>
+                  <p class="playlist-description">Мы создали ностальгический плейлист специально для тебя</p>
+               </div>
+
+               <div class="content__item">
+                  <div class="playlist-image">
+                     <div class="playlist-play"><img src="./img/play.svg" alt="" class="play"></div>
+                  </div>
+                  <h3 class="playlist-title">На повторе: флэшбэк</h3>
+                  <p class="playlist-description">Треки, которые были твоими любимыми</p>
+               </div>
+            </div>
+         </div>
+      </main>
+   </div>
+</body>
+
 </html>
