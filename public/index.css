@@ -14,7 +14,7 @@
    grid-template-rows: auto 1fr;
    grid-template-areas: "nav header"
                         "nav content";
-   width: 100%;
+   
 }
 
 .header {
@@ -161,10 +161,11 @@
 .content__playlists {
    display: flex;
    gap: 10px;
+   flex-wrap: wrap;
 }
 
 .content__item {
-   width: 220px;
+   max-width: 220px;
    height: 300px;
    padding: 15px;
    background-color:#171717;
