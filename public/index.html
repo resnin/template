@@ -3,7 +3,6 @@
 
 <head>
    <meta charset="utf-8" />
-   <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
    <link rel="stylesheet" href="./index.css">
    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap" rel="stylesheet">
    <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -80,20 +79,13 @@
 
       <main class="content">
          <div class="content__new">
-            <h2 class="content__title">Только для тебя, username</h2>
+            <h2 class="content__title">Новинки</h2>
             <div class="content__playlists">
-               <div class="content__item">
-                  <div class="playlist-image">
-                     <div class="playlist-play"><img src="./img/play.svg" alt="" class="play"></div>
-                  </div>
-                  <h3 class="playlist-title">Радар новинок</h3>
-                  <p class="playlist-description">Свежая музыка от любимых исполнителей и новые треки, подобранные
-                     специально для тебя. Обновляется каждую пятницу.</p>
-               </div>
+
             </div>
          </div>
 
-         <div class="content__mood">
+         <div class="content__categories">
             <h2 class="content__title">Настроение</h2>
             <p class="content__description">Здесь найдется музыка для любого настроения.</p>
             <div class="content__playlists">
@@ -186,6 +178,17 @@
          </div>
       </main>
    </div>
+
+   <div class="popup">
+      <div class="popup__body">
+         <div class="popup__content">
+            <ul class="popup__list"></ul>
+            <a href="" class="popup__close">Закрыть</a>
+         </div>
+      </div>
+   </div>
+
+   <script async src="./script.js"></script>
 </body>
 
 </html>
