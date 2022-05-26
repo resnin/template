@@ -8,6 +8,7 @@ const Content = () => {
    let [albums, setAlbums] = useState([]);
    let [openPopup, setOpenPopup] = useState(false);
    let [tracklist, setTracklist] = useState([]);
+   let [pending, setPending] = useState(false)
 
    useEffect(async () => {
       let result = await getNewReleases();
@@ -16,9 +17,11 @@ const Content = () => {
    }, []);
 
    const setTracks = async (id) => {
+      setPending(true);
       let result = await getTracks(id);
-      setTracklist(result)
-      setOpenPopup(true)
+      setTracklist(result);
+      setOpenPopup(true);
+      setPending(false);
    }
 
    return (
@@ -30,7 +33,7 @@ const Content = () => {
                   <div className="content__item" key={item.id}>
                      <img
                         src={item.images[1].url}
-                        onClick={() => { setTracks(item.id) }}
+                        onClick={!pending && (() => { setTracks(item.id) })}
                         className="playlist-image" />
                      <div className="playlist-play">
                         <img src={play} alt="" className="play" />
